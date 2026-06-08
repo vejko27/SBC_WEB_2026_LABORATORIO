@@ -1,0 +1,263 @@
+:root {
+	/* Azul del Logo - Colores principales */
+	--sbc-blue-50: #e6f0fb;
+	--sbc-blue-100: #cce1f7;
+	--sbc-blue-200: #99c3ef;
+	--sbc-blue-300: #66a5e7;
+	--sbc-blue-400: #3387df;
+	--sbc-blue-500: #0066b2;
+	--sbc-blue-600: #004d8e;
+	--sbc-blue-700: #00346a;
+	--sbc-blue-800: #001b46;
+	--sbc-blue-900: #000d23;
+
+	/* Verde del Logo - Accent */
+	--sbc-green-50: #f5fae0;
+	--sbc-green-100: #ebf5c1;
+	--sbc-green-200: #d7eb83;
+	--sbc-green-300: #c3e145;
+	--sbc-green-400: #a4d65e;
+	--sbc-green-500: #9bc84a;
+	--sbc-green-600: #7fa835;
+	--sbc-green-700: #638820;
+	--sbc-green-800: #47680b;
+	--sbc-green-900: #2b4800;
+}
+
+/* Evita negro puro: base oscura azul del logo */
+.bg-gray-950,
+.bg-gray-950\/95,
+.hover\:bg-gray-950:hover {
+	background-color: #000d23 !important;
+}
+
+.bg-gray-900,
+.hover\:bg-gray-900:hover {
+	background-color: #001b46 !important;
+}
+
+.bg-gray-800,
+.hover\:bg-gray-800:hover {
+	background-color: #00346a !important;
+}
+
+.text-gray-400 {
+	color: #a0b8d4 !important;
+}
+
+.text-gray-500 {
+	color: #7a95b0 !important;
+}
+
+.text-gray-600 {
+	color: #5a7290 !important;
+}
+
+.border-gray-800,
+.border-gray-800\/70,
+.border-gray-800\/60 {
+	border-color: rgb(0 27 70 / 0.7) !important;
+}
+
+/* Mapeo global: cualquier orange-* pasa a verde/azul del logo */
+.text-orange-400,
+.text-orange-300,
+.hover\:text-orange-400:hover,
+.hover\:text-orange-300:hover,
+.group:hover .group-hover\:text-orange-400 {
+	color: var(--sbc-green-400) !important;
+}
+
+.text-orange-500,
+.text-orange-600 {
+	color: var(--sbc-blue-500) !important;
+}
+
+.bg-orange-500,
+.bg-orange-600,
+.bg-orange-100,
+.bg-orange-50,
+.hover\:bg-orange-600:hover,
+.hover\:bg-orange-500:hover,
+.group:hover .group-hover\:bg-orange-600,
+.group:hover .group-hover\:bg-orange-500 {
+	background-color: var(--sbc-blue-500) !important;
+}
+
+.bg-orange-100,
+.bg-orange-50 {
+	background-color: rgb(164 214 94 / 0.2) !important;
+}
+
+.bg-orange-600\/10 {
+	background-color: rgb(0 102 178 / 0.1) !important;
+}
+
+.bg-orange-600\/20 {
+	background-color: rgb(0 102 178 / 0.2) !important;
+}
+
+.bg-orange-600\/30 {
+	background-color: rgb(0 102 178 / 0.3) !important;
+}
+
+.bg-orange-500\/20 {
+	background-color: rgb(164 214 94 / 0.24) !important;
+}
+
+.text-orange-100 {
+	color: #d8eef5 !important;
+}
+
+.border-orange-500,
+.border-orange-600,
+.border-orange-300,
+.hover\:border-orange-300:hover,
+.hover\:border-orange-500\/70:hover,
+.hover\:border-orange-600\/30:hover {
+	border-color: var(--sbc-blue-500) !important;
+}
+
+.border-orange-600\/20 {
+	border-color: rgb(0 102 178 / 0.24) !important;
+}
+
+.border-orange-500\/40 {
+	border-color: rgb(164 214 94 / 0.45) !important;
+}
+
+.ring-orange-600\/40,
+.hover\:ring-orange-600\/40:hover {
+	--tw-ring-color: rgb(164 214 94 / 0.45) !important;
+}
+
+.shadow-orange-600\/10,
+.shadow-orange-600\/30,
+.shadow-orange-600\/40 {
+	--tw-shadow-color: rgb(0 51 89 / 0.35) !important;
+}
+
+.from-orange-600 {
+	--tw-gradient-from: var(--sbc-blue-500) var(--tw-gradient-from-position) !important;
+	--tw-gradient-to: rgb(0 102 178 / 0) var(--tw-gradient-to-position) !important;
+	--tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
+}
+
+.to-orange-500 {
+	--tw-gradient-to: var(--sbc-green-500) var(--tw-gradient-to-position) !important;
+}
+
+.fill-orange-500 {
+	fill: var(--sbc-blue-500) !important;
+}
+
+.stroke-orange-500,
+.stroke-orange-600 {
+	stroke: var(--sbc-blue-500) !important;
+}
+
+.sbc-accent-chip {
+	background-color: var(--sbc-green-500);
+	color: #123f4e;
+}
+
+/* Carrusel - Dots indicadores */
+.carousel-dot-active {
+	width: 2rem !important;
+	background-color: var(--sbc-blue-500) !important;
+	transition: all 300ms ease !important;
+}
+
+.carousel-dot-inactive {
+	width: 0.75rem !important;
+	background-color: rgba(255, 255, 255, 0.35) !important;
+	transition: all 300ms ease !important;
+}
+
+.carousel-dot-inactive:hover {
+	background-color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* Hero carrusel */
+.c-slide {
+	transition: opacity 0.9s ease-in-out;
+}
+
+@keyframes heroIn {
+	from {
+		opacity: 0;
+		transform: translateY(26px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.hero-a {
+	animation: heroIn 0.7s ease-out 0.20s both;
+}
+
+.hero-b {
+	animation: heroIn 0.7s ease-out 0.45s both;
+}
+
+.hero-c {
+	animation: heroIn 0.7s ease-out 0.70s both;
+}
+
+@keyframes pgBar {
+	from {
+		transform: scaleX(0);
+	}
+
+	to {
+		transform: scaleX(1);
+	}
+}
+
+.pg-anim {
+	transform-origin: left;
+	animation: pgBar 5s linear forwards;
+}
+
+/* Acordeones y animaciones de páginas internas */
+.accordion-content {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.4s ease, padding 0.3s ease;
+}
+
+.accordion-content.open {
+	max-height: 1000px;
+}
+
+.chevron {
+	transition: transform 0.3s ease;
+}
+
+.chevron.open {
+	transform: rotate(180deg);
+}
+
+@keyframes fadeUp {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.fade-up {
+	opacity: 0;
+	animation: fadeUp 0.6s ease forwards;
+}
+
+.card-anim {
+	animation: fadeUp 0.5s ease forwards;
+}

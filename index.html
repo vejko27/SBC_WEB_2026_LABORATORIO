@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<!--
+  ╔══════════════════════════════════════════════════════════════╗
+  ║       SBC TRANSPORT — Página Principal (index.html)          ║
+  ║                                                              ║
+  ║  PALETA DE COLORES (identidad propia, diferente a Dalcorp): ║
+  ║  · Naranja industrial: orange-600 (#EA580C) — marca        ║
+  ║  · Gris carbón oscuro: gray-950/gray-900 — fondos dark     ║
+  ║  · Blanco/Gris claro:  white/gray-50 — fondos light        ║
+  ║                                                              ║
+  ║  TECNOLOGÍA: Tailwind CSS CDN (sin instalación)             ║
+  ║  FUENTE: Inter (Google Fonts CDN)                           ║
+  ║  JS: Vanilla JavaScript (sin librerías externas)            ║
+  ╚══════════════════════════════════════════════════════════════╝
+-->
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="SBC Transport – Empresa peruana de transporte de carga pesada para los sectores minero, construcción e industrial." />
+  <title>SBC Transport | Transporte Industrial · Logística Nacional</title>
+
+  <!-- ════════════════════════════════════════════════════════
+       TAILWIND CSS VÍA CDN
+       No requiere npm ni instalación. Incluye todas las
+       utilidades de Tailwind v3 disponibles.
+       ════════════════════════════════════════════════════════ -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Configuración extendida de Tailwind (fuente Inter) -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+
+  <!-- GOOGLE FONTS: Inter (pesos 300 → 900) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="resources/css/theme.css" />
+
+  <!-- ════════════════════════════════════════════════════════
+       CSS PERSONALIZADO MÍNIMO
+       Solo lo que Tailwind CDN no puede generar dinámicamente:
+       · Transición suave del carrusel (opacity)
+       · Animaciones de entrada del hero (slide-up + fade)
+       · Barra de progreso animada del carrusel
+       ════════════════════════════════════════════════════════ -->
+</head>
+
+<body data-page="index" class="font-sans antialiased bg-white text-gray-900">
+
+
+  <!-- ╔══════════════════════════════════════════════════════════════
+     ║  NAVBAR — Barra de Navegación Principal (fija, z-50)
+     ║
+     ║  · Fondo gray-950/95 + backdrop-blur para efecto glass
+     ║  · Logo: ícono SVG camión + "SBC.TRANSPORT" tipográfico
+     ║  · Nav desktop: dropdowns hover para Nosotros y Servicios
+     ║  · Botón CTA naranja "Cotizar ahora" (desktop)
+     ║  · Botón hamburguesa para menú móvil
+     ╚══════════════════════════════════════════════════════════════ -->
+  <header></header>
+  <!-- /NAVBAR -->
+
+  <!-- ╔══════════════════════════════════════════════════════════════
+     ║  HERO — Carrusel Principal (altura 100vh)
+     ║
+     ║  · 3 slides con imágenes de /resources/
+     ║  · Overlay: degradado oscuro de izq. a derecha
+     ║  · Animaciones de entrada escalonadas en el texto
+     ║  · Botón lateral "Brochure" (solo desktop)
+     ║  · Flechas prev/next y puntos indicadores
+     ║  · Barra de progreso naranja + auto-play 5s
+     ╚══════════════════════════════════════════════════════════════ -->
+  <section id="inicio" class="relative w-full h-screen overflow-hidden">
+
+    <!-- Botón lateral Brochure (desktop) -->
+    <div class="absolute left-0 top-1/2 -translate-y-1/2 z-30 hidden md:block">
+      <a href="#"
+        class="flex flex-col items-center gap-2 bg-orange-600 hover:bg-orange-500 text-white py-5 px-3 rounded-r-xl shadow-2xl transition-colors duration-300">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M4 16v1a2 2 0 002 2h12a2 2 0 002-2v-1M12 12V4m0 8l-3-3m3 3l3-3" />
+        </svg>
+        <span class="text-[10px] font-black tracking-[0.2em] uppercase"
+          style="writing-mode:vertical-rl;transform:rotate(180deg)">Brochure</span>
+      </a>
+    </div>
+
+    <!-- SLIDES -->
+    <div id="carousel" class="relative w-full h-full">
+
+      <!-- SLIDE 1: fondo 1.png (visible al cargar) -->
+      <div class="c-slide absolute inset-0" style="opacity:1;z-index:10">
+        <img src="resources/fondo 1.png" alt="SBC Transport – Transporte industrial"
+          class="w-full h-full object-cover object-center" />
+        <div class="absolute inset-0 bg-gradient-to-r from-gray-950/92 via-gray-900/55 to-transparent"></div>
+        <div class="absolute inset-0 flex items-center pt-16">
+          <div class="max-w-7xl mx-auto px-6 md:px-14 w-full">
+            <div class="max-w-xl">
+              <span
+                class="hero-a inline-flex items-center gap-2 bg-orange-600/20 border border-orange-500/40 text-orange-400 text-xs font-black px-3 py-1.5 rounded-full mb-5 uppercase tracking-widest">
+                <span class="w-2 h-2 bg-orange-500 rounded-full animate-pulse"></span>
+                Transporte Industrial · Perú
+              </span>
+              <h1 class="hero-b text-white font-black text-4xl md:text-6xl lg:text-7xl leading-[1.05] mb-5">
+                Carga segura,<br />entrega <span class="text-orange-500">puntual</span>
+              </h1>
+              <p class="hero-c text-gray-300 text-base md:text-lg leading-relaxed mb-8 max-w-md">
+                Soluciones logísticas para minería, construcción e industria. Flota moderna con trazabilidad GPS en
+                tiempo real.
+              </p>
+              <div class="hero-c flex flex-wrap gap-3">
+                <a href="servicios.html"
+                  class="bg-orange-600 hover:bg-orange-500 text-white font-bold px-7 py-3.5 rounded-full text-sm transition-all flex items-center gap-2 shadow-xl shadow-orange-600/40">
+                  Ver servicios <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </a>
+                <a href="contacto.html"
+                  class="border-2 border-white/30 hover:border-orange-500/70 text-white hover:text-orange-300 font-bold px-7 py-3.5 rounded-full text-sm transition-all backdrop-blur-sm">
+                  Solicitar cotización
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 2: fondo 2.png -->
+      <div class="c-slide absolute inset-0" style="opacity:0;z-index:0">
+        <img src="resources/fondo 2.png" alt="SBC Transport – Logística nacional"
+          class="w-full h-full object-cover object-center" />
+        <div class="absolute inset-0 bg-gradient-to-r from-gray-950/92 via-gray-900/55 to-transparent"></div>
+        <div class="absolute inset-0 flex items-center pt-16">
+          <div class="max-w-7xl mx-auto px-6 md:px-14 w-full">
+            <div class="max-w-xl">
+              <span
+                class="inline-flex items-center gap-2 bg-orange-600/20 border border-orange-500/40 text-orange-400 text-xs font-black px-3 py-1.5 rounded-full mb-5 uppercase tracking-widest">
+                <span class="w-2 h-2 bg-orange-500 rounded-full animate-pulse"></span>
+                Logística Integral
+              </span>
+              <h1 class="text-white font-black text-4xl md:text-6xl lg:text-7xl leading-[1.05] mb-5">
+                Rutas optimizadas<br />a nivel <span class="text-orange-500">nacional</span>
+              </h1>
+              <p class="text-gray-300 text-base md:text-lg leading-relaxed mb-8 max-w-md">
+                Planificamos cada ruta para reducir tiempos y costos. Tu carga llega siempre a su destino.
+              </p>
+              <div class="flex flex-wrap gap-3">
+                <a href="servicios.html"
+                  class="bg-orange-600 hover:bg-orange-500 text-white font-bold px-7 py-3.5 rounded-full text-sm transition-all flex items-center gap-2 shadow-xl shadow-orange-600/40">
+                  Conoce más <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </a>
+                <a href="contacto.html"
+                  class="border-2 border-white/30 hover:border-orange-500/70 text-white hover:text-orange-300 font-bold px-7 py-3.5 rounded-full text-sm transition-all backdrop-blur-sm">Contáctanos</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 3: fondo 3.png -->
+      <div class="c-slide absolute inset-0" style="opacity:0;z-index:0">
+        <img src="resources/fondo 3.png" alt="SBC Transport – Seguridad y cumplimiento"
+          class="w-full h-full object-cover object-center" />
+        <div class="absolute inset-0 bg-gradient-to-r from-gray-950/92 via-gray-900/55 to-transparent"></div>
+        <div class="absolute inset-0 flex items-center pt-16">
+          <div class="max-w-7xl mx-auto px-6 md:px-14 w-full">
+            <div class="max-w-xl">
+              <span
+                class="inline-flex items-center gap-2 bg-orange-600/20 border border-orange-500/40 text-orange-400 text-xs font-black px-3 py-1.5 rounded-full mb-5 uppercase tracking-widest">
+                <span class="w-2 h-2 bg-orange-500 rounded-full animate-pulse"></span>
+                Seguridad y Cumplimiento
+              </span>
+              <h1 class="text-white font-black text-4xl md:text-6xl lg:text-7xl leading-[1.05] mb-5">
+                Tu carga,<br />nuestra <span class="text-orange-500">responsabilidad</span>
+              </h1>
+              <p class="text-gray-300 text-base md:text-lg leading-relaxed mb-8 max-w-md">
+                Más de 10 años operando bajo los más altos estándares de seguridad vial y cumplimiento normativo MTC.
+              </p>
+              <div class="flex flex-wrap gap-3">
+                <a href="nosotros.html"
+                  class="bg-orange-600 hover:bg-orange-500 text-white font-bold px-7 py-3.5 rounded-full text-sm transition-all flex items-center gap-2 shadow-xl shadow-orange-600/40">
+                  Sobre nosotros <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </a>
+                <a href="contacto.html"
+                  class="border-2 border-white/30 hover:border-orange-500/70 text-white hover:text-orange-300 font-bold px-7 py-3.5 rounded-full text-sm transition-all backdrop-blur-sm">Solicitar
+                  cotización</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /slides -->
+
+    <!-- Flecha ANTERIOR -->
+    <button onclick="changeSlide(-1)"
+      class="absolute left-4 md:left-10 top-1/2 -translate-y-1/2 z-20 w-11 h-11 bg-black/25 hover:bg-orange-600 text-white rounded-full flex items-center justify-center backdrop-blur-sm border border-white/10 hover:border-orange-500 transition-all duration-300">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+      </svg>
+    </button>
+
+    <!-- Flecha SIGUIENTE -->
+    <button onclick="changeSlide(1)"
+      class="absolute right-4 md:right-10 top-1/2 -translate-y-1/2 z-20 w-11 h-11 bg-black/25 hover:bg-orange-600 text-white rounded-full flex items-center justify-center backdrop-blur-sm border border-white/10 hover:border-orange-500 transition-all duration-300">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+      </svg>
+    </button>
+
+    <!-- Indicadores (dots) + barra de progreso -->
+    <div class="absolute bottom-0 left-0 right-0 z-20">
+      <!-- Barra de progreso naranja -->
+      <div class="h-0.5 bg-orange-600/20">
+        <div id="pgFill" class="h-full bg-orange-500 pg-anim"></div>
+      </div>
+      <!-- Dots -->
+      <div class="flex justify-center gap-2.5 py-5">
+        <button onclick="goToSlide(0)" id="d0" 
+          class="h-1.5 rounded-full carousel-dot-active" aria-label="Slide 1"></button>
+        <button onclick="goToSlide(1)" id="d1"
+          class="h-1.5 rounded-full carousel-dot-inactive" aria-label="Slide 2"></button>
+        <button onclick="goToSlide(2)" id="d2"
+          class="h-1.5 rounded-full carousel-dot-inactive" aria-label="Slide 3"></button>
+      </div>
+    </div>
+
+  </section>
+  <!-- /HERO CARRUSEL -->
+
+
+  <!-- ╔══════════════════════════════════════════════════════════════
+     ║  ESTADÍSTICAS
+     ║  Franja gray-900 con borde naranja superior.
+     ║  4 métricas clave con efecto hover de escala.
+     ╚══════════════════════════════════════════════════════════════ -->
+  <section class="bg-gray-900 border-t-4 border-orange-600 py-11">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div class="group cursor-default">
+          <p
+            class="text-4xl md:text-5xl font-black text-orange-500 group-hover:scale-110 transition-transform duration-300">
+            +500</p>
+          <p class="text-gray-400 text-sm mt-1.5 font-medium">Viajes completados</p>
+        </div>
+        <div class="group cursor-default">
+          <p
+            class="text-4xl md:text-5xl font-black text-orange-500 group-hover:scale-110 transition-transform duration-300">
+            +80</p>
+          <p class="text-gray-400 text-sm mt-1.5 font-medium">Unidades en flota</p>
+        </div>
+        <div class="group cursor-default">
+          <p
+            class="text-4xl md:text-5xl font-black text-orange-500 group-hover:scale-110 transition-transform duration-300">
+            +10</p>
+          <p class="text-gray-400 text-sm mt-1.5 font-medium">Años de experiencia</p>
+        </div>
+        <div class="group cursor-default">
+          <p
+            class="text-4xl md:text-5xl font-black text-orange-500 group-hover:scale-110 transition-transform duration-300">
+            24/7</p>
+          <p class="text-gray-400 text-sm mt-1.5 font-medium">Soporte operativo</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /ESTADÍSTICAS -->
+
+
+  <!-- ╔══════════════════════════════════════════════════════════════
+     ║  SERVICIOS PRINCIPALES
+     ║
+     ║  · 6 tarjetas en grid 3 columnas
+     ║  · Hover: fondo oscuro, ícono naranja
+     ║  · Tarjeta 6 (GPS) siempre con fondo naranja (destacada)
+     ╚══════════════════════════════════════════════════════════════ -->
+  <section id="servicios" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="text-center mb-14">
+        <span class="inline-block text-orange-600 font-black text-xs uppercase tracking-[0.2em] mb-3">── Lo que
+          ofrecemos ──</span>
+        <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-4">Nuestros <span
+            class="text-orange-600">Servicios</span></h2>
+        <p class="text-gray-500 max-w-xl mx-auto text-base md:text-lg">Soluciones de transporte y logística para cada
+          sector industrial del país.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <!-- Tarjeta 1: Transporte de Carga -->
+        <a href="servicios.html#carga"
+          class="group bg-gray-50 hover:bg-gray-900 rounded-2xl p-7 transition-all duration-300 border border-gray-100 hover:border-orange-600/30 hover:shadow-xl block">
+          <div
+            class="w-12 h-12 bg-orange-100 group-hover:bg-orange-600 rounded-xl flex items-center justify-center mb-5 transition-colors duration-300">
+            <svg class="w-6 h-6 text-orange-600 group-hover:text-white transition-colors" fill="none"
+              stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10h10zM13 8h3l3 3v5h-3m-3 0H9" />
+            </svg>
+          </div>
+          <h3 class="text-gray-900 group-hover:text-white font-bold text-base mb-2 transition-colors">Transporte de
+            Carga Pesada</h3>
+          <p class="text-gray-500 group-hover:text-gray-400 text-sm leading-relaxed transition-colors">Traslado de carga
+            pesada y sobredimensionada con unidades especializadas y operadores certificados.</p>
+          <div
+            class="mt-5 flex items-center gap-1.5 text-orange-600 group-hover:text-orange-400 text-xs font-bold transition-colors">
+            Ver más <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </div>
+        </a>
+
+        <!-- Tarjeta 2: Logística Integral -->
+        <a href="servicios.html#logistica"
+          class="group bg-gray-50 hover:bg-gray-900 rounded-2xl p-7 transition-all duration-300 border border-gray-100 hover:border-orange-600/30 hover:shadow-xl block">
+          <div
+            class="w-12 h-12 bg-orange-100 group-hover:bg-orange-600 rounded-xl flex items-center justify-center mb-5 transition-colors duration-300">
+            <svg class="w-6 h-6 text-orange-600 group-hover:text-white transition-colors" fill="none"
+              stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+            </svg>
+          </div>
+          <h3 class="text-gray-900 group-hover:text-white font-bold text-base mb-2 transition-colors">Logística Integral
+          </h3>
+          <p class="text-gray-500 group-hover:text-gray-400 text-sm leading-relaxed transition-colors">Planificación de
+            rutas, gestión de almacenes y coordinación de entregas para máxima eficiencia.</p>
+          <div
+            class="mt-5 flex items-center gap-1.5 text-orange-600 group-hover:text-orange-400 text-xs font-bold transition-colors">
+            Ver más <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </div>
+        </a>
+
+        <!-- Tarjeta 3: Sector Minero -->
+        <a href="servicios.html#mineria"
+          class="group bg-gray-50 hover:bg-gray-900 rounded-2xl p-7 transition-all duration-300 border border-gray-100 hover:border-orange-600/30 hover:shadow-xl block">
+          <div
+            class="w-12 h-12 bg-orange-100 group-hover:bg-orange-600 rounded-xl flex items-center justify-center mb-5 transition-colors duration-300">
+            <svg class="w-6 h-6 text-orange-600 group-hover:text-white transition-colors" fill="none"
+              stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+            </svg>
+          </div>
+          <h3 class="text-gray-900 group-hover:text-white font-bold text-base mb-2 transition-colors">Sector Minero</h3>
+          <p class="text-gray-500 group-hover:text-gray-400 text-sm leading-relaxed transition-colors">Transporte
+            especializado para insumos, maquinaria y mineral hacia zonas de alta exigencia operativa.</p>
+          <div
+            class="mt-5 flex items-center gap-1.5 text-orange-600 group-hover:text-orange-400 text-xs font-bold transition-colors">
+            Ver más <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </div>
+        </a>
+
+        <!-- Tarjeta 4: Construcción e Industrial -->
+        <a href="servicios.html#construccion"
+          class="group bg-gray-50 hover:bg-gray-900 rounded-2xl p-7 transition-all duration-300 border border-gray-100 hover:border-orange-600/30 hover:shadow-xl block">
+          <div
+            class="w-12 h-12 bg-orange-100 group-hover:bg-orange-600 rounded-xl flex items-center justify-center mb-5 transition-colors duration-300">
+            <svg class="w-6 h-6 text-orange-600 group-hover:text-white transition-colors" fill="none"
+              stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+            </svg>
+          </div>
+          <h3 class="text-gray-900 group-hover:text-white font-bold text-base mb-2 transition-colors">Construcción e
+            Industrial</h3>
+          <p class="text-gray-500 group-hover:text-gray-400 text-sm leading-relaxed transition-colors">Materiales de
+            construcción, equipos industriales y suministros con precisión y cumplimiento normativo.</p>
+          <div
+            class="mt-5 flex items-center gap-1.5 text-orange-600 group-hover:text-orange-400 text-xs font-bold transition-colors">
+            Ver más <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </div>
+        </a>
+
+        <!-- Tarjeta 5: Residuos Sólidos -->
+        <a href="servicios.html#residuos"
+          class="group bg-gray-50 hover:bg-gray-900 rounded-2xl p-7 transition-all duration-300 border border-gray-100 hover:border-orange-600/30 hover:shadow-xl block">
+          <div
+            class="w-12 h-12 bg-orange-100 group-hover:bg-orange-600 rounded-xl flex items-center justify-center mb-5 transition-colors duration-300">
+            <svg class="w-6 h-6 text-orange-600 group-hover:text-white transition-colors" fill="none"
+              stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+            </svg>
+          </div>
+          <h3 class="text-gray-900 group-hover:text-white font-bold text-base mb-2 transition-colors">Residuos Sólidos
+          </h3>
+          <p class="text-gray-500 group-hover:text-gray-400 text-sm leading-relaxed transition-colors">Gestión y
+            transporte de residuos industriales cumpliendo todas las normativas ambientales vigentes.</p>
+          <div
+            class="mt-5 flex items-center gap-1.5 text-orange-600 group-hover:text-orange-400 text-xs font-bold transition-colors">
+            Ver más <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </div>
+        </a>
+
+        <!-- Tarjeta 6: Trazabilidad GPS (siempre naranja) -->
+        <a href="servicios.html#gps"
+          class="group bg-orange-600 hover:bg-orange-500 rounded-2xl p-7 transition-all duration-300 block">
+          <div
+            class="w-12 h-12 bg-white/20 group-hover:bg-white/30 rounded-xl flex items-center justify-center mb-5 transition-colors duration-300">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <h3 class="text-white font-bold text-base mb-2">Trazabilidad GPS</h3>
+          <p class="text-orange-100 text-sm leading-relaxed">Monitoreo en tiempo real de toda la flota. Visibilidad
+            total de tu carga desde origen hasta destino.</p>
+          <div class="mt-5 flex items-center gap-1.5 text-white text-xs font-bold">
+            Ver más <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </div>
+        </a>
+
+      </div>
+
+      <div class="text-center mt-10">
+        <a href="servicios.html"
+          class="inline-flex items-center gap-2 border-2 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white font-bold px-8 py-3.5 rounded-full transition-all duration-200 text-sm">
+          Ver todos los servicios
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+  <!-- /SERVICIOS -->
+
+
+  <!-- ╔══════════════════════════════════════════════════════════════
+     ║  NOSOTROS (vista previa)
+     ║
+     ║  · Layout 2 columnas: imagen izq. / texto der.
+     ║  · Fondo gray-950 para contraste y variedad visual
+     ║  · Badge flotante con años de experiencia
+     ║  · Lista de ventajas competitivas con íconos check
+     ╚══════════════════════════════════════════════════════════════ -->
+  <section id="nosotros" class="py-20 bg-gray-950">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+
+        <!-- Imagen -->
+        <div class="relative">
+          <div class="rounded-2xl overflow-hidden shadow-2xl shadow-black/60 ring-1 ring-white/5">
+            <img src="resources/fondo 3.png" alt="SBC Transport – Sobre nosotros"
+              class="w-full h-[440px] object-cover" />
+          </div>
+          <!-- Badge flotante -->
+          <div
+            class="absolute -bottom-5 -right-5 hidden md:block bg-orange-600 rounded-2xl p-5 shadow-2xl shadow-orange-600/40">
+            <p class="text-white font-black text-3xl leading-none">+10</p>
+            <p class="text-orange-100 text-xs font-semibold mt-0.5">años de<br />experiencia</p>
+          </div>
+          <!-- Decoración esquina -->
+          <div
+            class="absolute -top-5 -left-5 w-20 h-20 border-[3px] border-orange-600/30 rounded-2xl -z-10 hidden md:block">
+          </div>
+        </div>
+
+        <!-- Texto -->
+        <div>
+          <span class="inline-block text-orange-500 font-black text-xs uppercase tracking-[0.2em] mb-3">── Quiénes somos
+            ──</span>
+          <h2 class="text-4xl md:text-5xl font-black text-white leading-tight mb-5">
+            Comprometidos con <br /><span class="text-orange-500">tu operación</span> desde el primer día
+          </h2>
+          <p class="text-gray-400 leading-relaxed mb-4">
+            SBC Transport es una empresa peruana de transporte terrestre con más de 10 años de trayectoria en el
+            traslado de carga pesada para los sectores más exigentes del país.
+          </p>
+          <p class="text-gray-400 leading-relaxed mb-7">
+            Somos más que transportistas: somos socios estratégicos que garantizan disponibilidad, puntualidad y
+            seguridad en cada operación.
+          </p>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center gap-3 text-gray-300 text-sm">
+              <span class="w-5 h-5 bg-orange-600 rounded-full flex items-center justify-center shrink-0"><svg
+                  class="w-3 h-3 text-white" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg></span>
+              Flota moderna certificada con mantenimiento preventivo
+            </li>
+            <li class="flex items-center gap-3 text-gray-300 text-sm">
+              <span class="w-5 h-5 bg-orange-600 rounded-full flex items-center justify-center shrink-0"><svg
+                  class="w-3 h-3 text-white" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg></span>
+              Operadores capacitados en seguridad vial y manejo defensivo
+            </li>
+            <li class="flex items-center gap-3 text-gray-300 text-sm">
+              <span class="w-5 h-5 bg-orange-600 rounded-full flex items-center justify-center shrink-0"><svg
+                  class="w-3 h-3 text-white" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg></span>
+              Cobertura a nivel nacional con soporte 24/7
+            </li>
+            <li class="flex items-center gap-3 text-gray-300 text-sm">
+              <span class="w-5 h-5 bg-orange-600 rounded-full flex items-center justify-center shrink-0"><svg
+                  class="w-3 h-3 text-white" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg></span>
+              Trazabilidad GPS en tiempo real en toda la flota
+            </li>
+          </ul>
+          <a href="nosotros.html"
+            class="inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-500 text-white font-bold px-7 py-3.5 rounded-full transition-all shadow-lg shadow-orange-600/30 text-sm">
+            Conoce nuestra historia
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- /NOSOTROS PREVIEW -->
+
+
+  <!-- ╔══════════════════════════════════════════════════════════════
+     ║  POR QUÉ ELEGIRNOS
+     ║  4 pilares con ícono, título y descripción.
+     ║  Hover: ícono cambia a fondo naranja.
+     ╚══════════════════════════════════════════════════════════════ -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <span class="inline-block text-orange-600 font-black text-xs uppercase tracking-[0.2em] mb-3">── Nuestra
+          diferencia ──</span>
+        <h2 class="text-4xl md:text-5xl font-black text-gray-900">¿Por qué elegir <span class="text-orange-600">SBC
+            Transport</span>?</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Pilar 1 -->
+        <div class="text-center p-7 rounded-2xl hover:bg-gray-50 group transition-colors">
+          <div
+            class="w-16 h-16 bg-orange-100 group-hover:bg-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-5 transition-colors duration-300">
+            <svg class="w-8 h-8 text-orange-600 group-hover:text-white transition-colors" fill="none"
+              stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">Seguridad certificada</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Cumplimos con todas las normativas de seguridad vial del MTC
+            y certificaciones internacionales.</p>
+        </div>
+        <!-- Pilar 2 -->
+        <div class="text-center p-7 rounded-2xl hover:bg-gray-50 group transition-colors">
+          <div
+            class="w-16 h-16 bg-orange-100 group-hover:bg-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-5 transition-colors duration-300">
+            <svg class="w-8 h-8 text-orange-600 group-hover:text-white transition-colors" fill="none"
+              stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">Puntualidad garantizada</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">98% de entregas a tiempo gracias a la planificación rigurosa
+            de cada ruta operativa.</p>
+        </div>
+        <!-- Pilar 3 -->
+        <div class="text-center p-7 rounded-2xl hover:bg-gray-50 group transition-colors">
+          <div
+            class="w-16 h-16 bg-orange-100 group-hover:bg-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-5 transition-colors duration-300">
+            <svg class="w-8 h-8 text-orange-600 group-hover:text-white transition-colors" fill="none"
+              stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">Equipo especializado</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Operadores y logísticos con años de experiencia en
+            operaciones de alta complejidad nacional.</p>
+        </div>
+        <!-- Pilar 4 -->
+        <div class="text-center p-7 rounded-2xl hover:bg-gray-50 group transition-colors">
+          <div
+            class="w-16 h-16 bg-orange-100 group-hover:bg-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-5 transition-colors duration-300">
+            <svg class="w-8 h-8 text-orange-600 group-hover:text-white transition-colors" fill="none"
+              stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">Tecnología de punta</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">GPS en tiempo real, gestión digital de documentos y
+            comunicación constante con el cliente.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /POR QUÉ ELEGIRNOS -->
+
+
+  <!-- ╔══════════════════════════════════════════════════════════════
+     ║  PROYECTOS DESTACADOS
+     ║  3 cards con imagen, overlay degradado y datos del proyecto.
+     ║  Efecto zoom en la imagen al hacer hover.
+     ╚══════════════════════════════════════════════════════════════ -->
+  <section id="proyectos" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <span class="inline-block text-orange-600 font-black text-xs uppercase tracking-[0.2em] mb-3">── Portafolio
+          ──</span>
+        <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-4">Proyectos <span
+            class="text-orange-600">Destacados</span></h2>
+        <p class="text-gray-500 max-w-xl mx-auto">Una muestra de las operaciones que hemos ejecutado con excelencia para
+          nuestros clientes.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <!-- Proyecto 1 -->
+        <div
+          class="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 cursor-pointer">
+          <img src="resources/fondo 1.png" alt="Proyecto Minero"
+            class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-gradient-to-t from-gray-950/90 via-gray-950/20 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-5">
+            <span class="text-orange-400 text-xs font-black uppercase tracking-widest">Sector Minero</span>
+            <h3 class="text-white font-black text-base mt-1">Traslado de insumos – Zona Sur</h3>
+            <p class="text-gray-400 text-xs mt-1 font-medium">250 toneladas · 3 meses de operación</p>
+          </div>
+        </div>
+        <!-- Proyecto 2 -->
+        <div
+          class="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 cursor-pointer">
+          <img src="resources/fondo 2.png" alt="Proyecto Construcción"
+            class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-gradient-to-t from-gray-950/90 via-gray-950/20 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-5">
+            <span class="text-orange-400 text-xs font-black uppercase tracking-widest">Construcción</span>
+            <h3 class="text-white font-black text-base mt-1">Materiales para obra vial – Lima</h3>
+            <p class="text-gray-400 text-xs mt-1 font-medium">120 viajes · Entrega puntual garantizada</p>
+          </div>
+        </div>
+        <!-- Proyecto 3 -->
+        <div
+          class="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 cursor-pointer">
+          <img src="resources/fondo 3.png" alt="Proyecto Industrial"
+            class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-gradient-to-t from-gray-950/90 via-gray-950/20 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-5">
+            <span class="text-orange-400 text-xs font-black uppercase tracking-widest">Industrial</span>
+            <h3 class="text-white font-black text-base mt-1">Distribución de equipos – Arequipa</h3>
+            <p class="text-gray-400 text-xs mt-1 font-medium">Maquinaria pesada · Ruta especial</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /PROYECTOS -->
+
+
+  <!-- ╔══════════════════════════════════════════════════════════════
+     ║  BANNER CTA (Call to Action)
+     ║  Franja naranja sólida con mensaje motivador y dos botones.
+     ╚══════════════════════════════════════════════════════════════ -->
+  <section class="bg-orange-600 py-16">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-3xl md:text-4xl font-black text-white mb-4">¿Listo para optimizar tu operación logística?</h2>
+      <p class="text-orange-100 text-lg mb-8 max-w-xl mx-auto">Contáctanos hoy y recibe una cotización personalizada sin
+        costo ni compromiso.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="contacto.html"
+          class="bg-white text-orange-600 font-black px-8 py-4 rounded-full hover:bg-gray-50 transition-colors shadow-xl text-sm">
+          Solicitar cotización ahora
+        </a>
+        <a href="tel:+51999999999"
+          class="border-2 border-white text-white font-bold px-8 py-4 rounded-full hover:bg-white hover:text-orange-600 transition-colors text-sm">
+          +51 999 999 999
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- /BANNER CTA -->
+
+
+  <!-- ╔══════════════════════════════════════════════════════════════
+     ║  FOOTER
+     ║  · 4 columnas: marca, empresa, servicios, contacto
+     ║  · Redes sociales con SVG inline
+     ║  · Línea copyright con links legales
+     ╚══════════════════════════════════════════════════════════════ -->
+  <footer></footer>
+  <!-- /FOOTER -->
+
+
+  <!-- ╔══════════════════════════════════════════════════════════════
+     ║  BOTÓN FLOTANTE WHATSAPP
+     ║  Posición fija bottom-right. Abre WhatsApp con mensaje.
+     ╚══════════════════════════════════════════════════════════════ -->
+  <a href="https://wa.me/51999999999?text=Hola%2C%20necesito%20informaci%C3%B3n%20sobre%20sus%20servicios"
+    target="_blank" rel="noopener"
+    class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-green-500 hover:bg-green-400 rounded-full shadow-2xl shadow-green-500/40 flex items-center justify-center transition-all duration-300 hover:scale-110"
+    aria-label="Contactar por WhatsApp">
+    <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+    </svg>
+  </a>
+
+  <script src="resources/js/layout.js"></script>
+
+
+  <!-- ╔══════════════════════════════════════════════════════════════
+     ║  JAVASCRIPT
+     ║
+     ║  ─── CARRUSEL ────────────────────────────────────────────
+     ║  · goToSlide(n): oculta el slide actual (opacity:0,z:0),
+     ║    muestra el slide n (opacity:1,z:10), actualiza dots y
+     ║    reinicia la barra de progreso.
+     ║  · changeSlide(dir): llama goToSlide(cur±1) y resetTimer()
+     ║  · Auto-play: setInterval cada 5000ms (5 segundos)
+     ║
+     ║  ─── MENÚ MÓVIL ───────────────────────────────────────────
+     ║  · Toggle #menuMob al presionar #btnHam
+     ║  · Intercambia ícono hamburger ↔ X
+     ║  · Cierra el menú al hacer clic en cualquier enlace
+     ╚══════════════════════════════════════════════════════════════ -->
+  <script>
+    /* ══ CARRUSEL ══════════════════════════════════════════════════ */
+    let cur = 0;                                    // Índice del slide activo
+    const sls = document.querySelectorAll('.c-slide'); // NodeList de todos los slides
+    const dts = [                                     // Dots indicadores
+      document.getElementById('d0'),
+      document.getElementById('d1'),
+      document.getElementById('d2'),
+    ];
+    const pgFill = document.getElementById('pgFill'); // Barra de progreso
+    let timer = null;
+
+    /**
+     * goToSlide(n) — Transiciona al slide con índice n.
+     */
+    function goToSlide(n) {
+      // Ocultar slide actual
+      sls[cur].style.opacity = '0';
+      sls[cur].style.zIndex = '0';
+      dts[cur].classList.remove('carousel-dot-active');
+      dts[cur].classList.add('carousel-dot-inactive');
+
+      // Activar nuevo slide
+      cur = ((n % sls.length) + sls.length) % sls.length;
+      sls[cur].style.opacity = '1';
+      sls[cur].style.zIndex = '10';
+      dts[cur].classList.remove('carousel-dot-inactive');
+      dts[cur].classList.add('carousel-dot-active');
+
+      // Reiniciar barra de progreso (reflow forzado para reiniciar animación CSS)
+      pgFill.classList.remove('pg-anim');
+      void pgFill.offsetWidth;
+      pgFill.classList.add('pg-anim');
+    }
+
+    /** changeSlide(dir) — Avanza o retrocede 1 slide. */
+    function changeSlide(dir) {
+      goToSlide(cur + dir);
+      resetTimer();
+    }
+
+    /** resetTimer — Reinicia el auto-play del carrusel. */
+    function resetTimer() {
+      clearInterval(timer);
+      timer = setInterval(() => changeSlide(1), 5000);
+    }
+
+    // Iniciar auto-play
+    timer = setInterval(() => changeSlide(1), 5000);
+
+
+    /* ══ MENÚ MÓVIL ════════════════════════════════════════════════ */
+    const btnHam = document.getElementById('btnHam');
+    const menuMob = document.getElementById('menuMob');
+    const icoHam = document.getElementById('icoHam');
+    const icoX = document.getElementById('icoX');
+
+    btnHam.addEventListener('click', () => {
+      const isOpen = !menuMob.classList.contains('hidden');
+      menuMob.classList.toggle('hidden');
+      icoHam.classList.toggle('hidden', !isOpen);
+      icoX.classList.toggle('hidden', isOpen);
+    });
+
+    // Cerrar al hacer clic en un enlace del menú
+    menuMob.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        menuMob.classList.add('hidden');
+        icoHam.classList.remove('hidden');
+        icoX.classList.add('hidden');
+      });
+    });
+  </script>
+
+</body>
+
+</html>
+

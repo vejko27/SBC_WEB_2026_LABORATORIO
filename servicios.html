@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<!--
+  ╔══════════════════════════════════════════════════════════════╗
+  ║       SBC TRANSPORT — Servicios (servicios.html)             ║
+  ║  Secciones: Hero, 6 Servicios detallados, Proceso de        ║
+  ║  trabajo (pasos), Sectores atendidos, CTA, Footer           ║
+  ╚══════════════════════════════════════════════════════════════╝
+-->
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Servicios | SBC Transport</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','system-ui','sans-serif'] } } } }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="resources/css/theme.css" />
+</head>
+
+<body data-page="servicios" class="font-sans antialiased bg-white text-gray-900">
+
+<!-- ╔══════════════════════════════════════════════════════════════
+     ║  NAVBAR — "Servicios" activo
+     ╚══════════════════════════════════════════════════════════════ -->
+<header></header>
+<!-- /NAVBAR -->
+
+
+<!-- ╔══════════════════════════════════════════════════════════════
+     ║  HERO DE PÁGINA — Banner superior con breadcrumb y título
+     ╚══════════════════════════════════════════════════════════════ -->
+<section class="relative pt-16 bg-gray-950">
+  <div class="relative overflow-hidden h-64 md:h-80">
+    <img src="resources/fondo 1.png" alt="Servicios" class="w-full h-full object-cover opacity-20" />
+    <div class="absolute inset-0 bg-gradient-to-r from-gray-950 to-gray-900/60"></div>
+    <div class="absolute inset-0 flex items-center">
+      <div class="max-w-7xl mx-auto px-6">
+        <nav class="flex items-center gap-2 text-xs text-gray-500 mb-3">
+          <a href="index.html" class="hover:text-orange-400 transition-colors">Inicio</a>
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          <span class="text-orange-400">Servicios</span>
+        </nav>
+        <h1 class="text-white font-black text-4xl md:text-5xl">Nuestros <span class="text-orange-500">Servicios</span></h1>
+        <p class="text-gray-400 mt-2 text-base md:text-lg max-w-lg">Soluciones de transporte y logística especializadas para cada sector industrial.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /HERO -->
+
+
+<!-- ╔══════════════════════════════════════════════════════════════
+     ║  SERVICIO 1: TRANSPORTE DE CARGA PESADA
+     ║  Descripción: Layout de 2 columnas — imagen izq, texto der
+     ║  (secciones alternas para dinamismo visual)
+     ╚══════════════════════════════════════════════════════════════ -->
+<section id="carga" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <!-- Imagen -->
+      <div class="relative rounded-2xl overflow-hidden shadow-xl shadow-gray-200">
+        <img src="resources/fondo 1.png" alt="Transporte de Carga Pesada" class="w-full h-80 object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-t from-gray-950/60 to-transparent"></div>
+        <div class="absolute bottom-4 left-4">
+          <span class="bg-orange-600 text-white text-xs font-black px-3 py-1.5 rounded-full uppercase tracking-wide">Carga Pesada</span>
+        </div>
+      </div>
+      <!-- Contenido -->
+      <div>
+        <!-- Número del servicio -->
+        <span class="text-orange-600/30 font-black text-7xl leading-none select-none">01</span>
+        <h2 class="text-3xl md:text-4xl font-black text-gray-900 -mt-4 mb-4">Transporte de <span class="text-orange-600">Carga Pesada</span></h2>
+        <p class="text-gray-500 mb-5 leading-relaxed">Especializados en el traslado de carga pesada, sobredimensionada y de alto riesgo. Nuestras unidades están equipadas con sistemas de sujeción certificados y operadores con licencias especiales para garantizar la integridad de cada carga.</p>
+        <ul class="space-y-2.5 mb-7">
+          <li class="flex items-center gap-3 text-sm text-gray-600"><span class="w-5 h-5 bg-orange-100 rounded-full flex items-center justify-center shrink-0"><svg class="w-3 h-3 text-orange-600" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span>Capacidad de carga hasta 30 toneladas por unidad</li>
+          <li class="flex items-center gap-3 text-sm text-gray-600"><span class="w-5 h-5 bg-orange-100 rounded-full flex items-center justify-center shrink-0"><svg class="w-3 h-3 text-orange-600" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span>Escolta y apoyo en cargas sobredimensionadas</li>
+          <li class="flex items-center gap-3 text-sm text-gray-600"><span class="w-5 h-5 bg-orange-100 rounded-full flex items-center justify-center shrink-0"><svg class="w-3 h-3 text-orange-600" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span>Documentación y permisos especiales incluidos</li>
+          <li class="flex items-center gap-3 text-sm text-gray-600"><span class="w-5 h-5 bg-orange-100 rounded-full flex items-center justify-center shrink-0"><svg class="w-3 h-3 text-orange-600" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span>Seguimiento GPS en tiempo real</li>
+        </ul>
+        <a href="contacto.html" class="inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-500 text-white font-bold px-7 py-3.5 rounded-full transition-all shadow-lg shadow-orange-600/30 text-sm">
+          Solicitar cotización <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /CARGA PESADA -->
+
+
+<!-- ╔══════════════════════════════════════════════════════════════
+     ║  SERVICIO 2: LOGÍSTICA INTEGRAL
+     ║  Descripción: Layout invertido (texto izq, imagen der)
+     ╚══════════════════════════════════════════════════════════════ -->
+<section id="logistica" class="py-20 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <span class="text-orange-600/30 font-black text-7xl leading-none select-none">02</span>
+        <h2 class="text-3xl md:text-4xl font-black text-gray-900 -mt-4 mb-4">Logística <span class="text-orange-600">Integral</span></h2>
+        <p class="text-gray-500 mb-5 leading-relaxed">Gestionamos toda la cadena logística: planificación de rutas, coordinación de despacho, gestión documental y seguimiento en tiempo real. Un solo punto de contacto para todas tus necesidades de transporte.</p>
+        <ul class="space-y-2.5 mb-7">
+          <li class="flex items-center gap-3 text-sm text-gray-600"><span class="w-5 h-5 bg-orange-100 rounded-full flex items-center justify-center shrink-0"><svg class="w-3 h-3 text-orange-600" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span>Optimización de rutas con software especializado</li>
+          <li class="flex items-center gap-3 text-sm text-gray-600"><span class="w-5 h-5 bg-orange-100 rounded-full flex items-center justify-center shrink-0"><svg class="w-3 h-3 text-orange-600" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span>Gestión de almacenamiento temporal</li>
+          <li class="flex items-center gap-3 text-sm text-gray-600"><span class="w-5 h-5 bg-orange-100 rounded-full flex items-center justify-center shrink-0"><svg class="w-3 h-3 text-orange-600" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span>Informes y trazabilidad en tiempo real</li>
+          <li class="flex items-center gap-3 text-sm text-gray-600"><span class="w-5 h-5 bg-orange-100 rounded-full flex items-center justify-center shrink-0"><svg class="w-3 h-3 text-orange-600" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span>Atención de urgencias 24/7</li>
+        </ul>
+        <a href="contacto.html" class="inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-500 text-white font-bold px-7 py-3.5 rounded-full transition-all shadow-lg shadow-orange-600/30 text-sm">
+          Solicitar cotización <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+      <div class="relative rounded-2xl overflow-hidden shadow-xl">
+        <img src="resources/fondo 2.png" alt="Logística Integral" class="w-full h-80 object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-t from-gray-950/60 to-transparent"></div>
+        <div class="absolute bottom-4 left-4"><span class="bg-orange-600 text-white text-xs font-black px-3 py-1.5 rounded-full uppercase tracking-wide">Logística</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /LOGÍSTICA -->
+
+
+<!-- ╔══════════════════════════════════════════════════════════════
+     ║  SERVICIOS 3–6: Tarjetas detalladas en 2x2
+     ║  Descripción: Grid de 4 tarjetas grandes con ícono,
+     ║  descripción extensa y lista de características.
+     ╚══════════════════════════════════════════════════════════════ -->
+<section class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-14">
+      <span class="inline-block text-orange-600 font-black text-xs uppercase tracking-[0.2em] mb-3">── Más servicios ──</span>
+      <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-4">Soluciones <span class="text-orange-600">Especializadas</span></h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+      <!-- Tarjeta: Sector Minero -->
+      <div id="mineria" class="bg-gray-950 rounded-2xl overflow-hidden group hover:ring-2 hover:ring-orange-600/40 transition-all duration-300">
+        <div class="p-8">
+          <div class="flex items-center gap-4 mb-5">
+            <div class="w-14 h-14 bg-orange-600/20 rounded-xl flex items-center justify-center">
+              <svg class="w-7 h-7 text-orange-500" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+            </div>
+            <div>
+              <span class="text-orange-500 text-xs font-black uppercase tracking-widest">03</span>
+              <h3 class="text-white font-black text-xl">Sector Minero</h3>
+            </div>
+          </div>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Transporte especializado para el sector minero: insumos, reactivos, maquinaria pesada y material extraído. Operamos en yacimientos de alta altitud con unidades adaptadas para las condiciones más extremas del país.
+          </p>
+          <ul class="space-y-2 mb-6">
+            <li class="flex items-center gap-2 text-gray-400 text-xs"><span class="w-1 h-4 bg-orange-500 rounded-full shrink-0"></span>Transporte de explosivos y materiales peligrosos</li>
+            <li class="flex items-center gap-2 text-gray-400 text-xs"><span class="w-1 h-4 bg-orange-500 rounded-full shrink-0"></span>Operación en zonas de alta altitud (+4,500 msnm)</li>
+            <li class="flex items-center gap-2 text-gray-400 text-xs"><span class="w-1 h-4 bg-orange-500 rounded-full shrink-0"></span>Cumplimiento normativo MINEM y MTC</li>
+            <li class="flex items-center gap-2 text-gray-400 text-xs"><span class="w-1 h-4 bg-orange-500 rounded-full shrink-0"></span>Operadores con capacitación en Ley 29783</li>
+          </ul>
+          <a href="contacto.html" class="inline-flex items-center gap-2 text-orange-500 hover:text-orange-400 text-sm font-bold transition-colors">
+            Cotizar servicio <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Tarjeta: Construcción e Industrial -->
+      <div id="construccion" class="bg-gray-950 rounded-2xl overflow-hidden group hover:ring-2 hover:ring-orange-600/40 transition-all duration-300">
+        <div class="p-8">
+          <div class="flex items-center gap-4 mb-5">
+            <div class="w-14 h-14 bg-orange-600/20 rounded-xl flex items-center justify-center">
+              <svg class="w-7 h-7 text-orange-500" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+            </div>
+            <div>
+              <span class="text-orange-500 text-xs font-black uppercase tracking-widest">04</span>
+              <h3 class="text-white font-black text-xl">Construcción e Industrial</h3>
+            </div>
+          </div>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Suministramos soluciones logísticas para proyectos de construcción e industria. Desde materiales de obra hasta equipos industriales de gran formato, garantizamos entregas en los tiempos pactados.
+          </p>
+          <ul class="space-y-2 mb-6">
+            <li class="flex items-center gap-2 text-gray-400 text-xs"><span class="w-1 h-4 bg-orange-500 rounded-full shrink-0"></span>Transporte de estructuras metálicas y prefabricados</li>
+            <li class="flex items-center gap-2 text-gray-400 text-xs"><span class="w-1 h-4 bg-orange-500 rounded-full shrink-0"></span>Granel: arena, cemento, piedra chancada</li>
+            <li class="flex items-center gap-2 text-gray-400 text-xs"><span class="w-1 h-4 bg-orange-500 rounded-full shrink-0"></span>Maquinaria pesada: excavadoras, grúas, compresoras</li>
+            <li class="flex items-center gap-2 text-gray-400 text-xs"><span class="w-1 h-4 bg-orange-500 rounded-full shrink-0"></span>Coordinación directa con jefes de obra</li>
+          </ul>
+          <a href="contacto.html" class="inline-flex items-center gap-2 text-orange-500 hover:text-orange-400 text-sm font-bold transition-colors">
+            Cotizar servicio <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Tarjeta: Residuos Sólidos -->
+      <div id="residuos" class="bg-gray-950 rounded-2xl overflow-hidden group hover:ring-2 hover:ring-orange-600/40 transition-all duration-300">
+        <div class="p-8">
+          <div class="flex items-center gap-4 mb-5">
+            <div class="w-14 h-14 bg-orange-600/20 rounded-xl flex items-center justify-center">
+              <svg class="w-7 h-7 text-orange-500" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+            </div>
+            <div>
+              <span class="text-orange-500 text-xs font-black uppercase tracking-widest">05</span>
+              <h3 class="text-white font-black text-xl">Residuos Sólidos</h3>
+            </div>
+          </div>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5">
+            Servicio de transporte y disposición de residuos sólidos industriales con cumplimiento estricto de la Ley General de Residuos Sólidos (Ley 27314) y sus modificatorias. Manifiesto de residuos incluido.
+          </p>
+          <ul class="space-y-2 mb-6">
+            <li class="flex items-center gap-2 text-gray-400 text-xs"><span class="w-1 h-4 bg-orange-500 rounded-full shrink-0"></span>Residuos peligrosos y no peligrosos</li>
+            <li class="flex items-center gap-2 text-gray-400 text-xs"><span class="w-1 h-4 bg-orange-500 rounded-full shrink-0"></span>Unidades especiales para residuos RAEE</li>
+            <li class="flex items-center gap-2 text-gray-400 text-xs"><span class="w-1 h-4 bg-orange-500 rounded-full shrink-0"></span>Certificados de disposición final</li>
+            <li class="flex items-center gap-2 text-gray-400 text-xs"><span class="w-1 h-4 bg-orange-500 rounded-full shrink-0"></span>Manifiesto electrónico SIGERSOL</li>
+          </ul>
+          <a href="contacto.html" class="inline-flex items-center gap-2 text-orange-500 hover:text-orange-400 text-sm font-bold transition-colors">
+            Cotizar servicio <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Tarjeta: Trazabilidad GPS -->
+      <div id="gps" class="bg-orange-600 rounded-2xl overflow-hidden group hover:bg-orange-500 transition-all duration-300">
+        <div class="p-8">
+          <div class="flex items-center gap-4 mb-5">
+            <div class="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center">
+              <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </div>
+            <div>
+              <span class="text-orange-200 text-xs font-black uppercase tracking-widest">06</span>
+              <h3 class="text-white font-black text-xl">Trazabilidad GPS</h3>
+            </div>
+          </div>
+          <p class="text-orange-100 text-sm leading-relaxed mb-5">
+            Toda nuestra flota cuenta con sistemas GPS de última generación. Ofrecemos a nuestros clientes un portal web y app móvil para monitorear en tiempo real el estado y posición exacta de su carga durante todo el trayecto.
+          </p>
+          <ul class="space-y-2 mb-6">
+            <li class="flex items-center gap-2 text-orange-100 text-xs"><span class="w-1 h-4 bg-white/50 rounded-full shrink-0"></span>Portal cliente con mapa interactivo en tiempo real</li>
+            <li class="flex items-center gap-2 text-orange-100 text-xs"><span class="w-1 h-4 bg-white/50 rounded-full shrink-0"></span>Alertas automáticas por WhatsApp y email</li>
+            <li class="flex items-center gap-2 text-orange-100 text-xs"><span class="w-1 h-4 bg-white/50 rounded-full shrink-0"></span>Historial completo de cada viaje</li>
+            <li class="flex items-center gap-2 text-orange-100 text-xs"><span class="w-1 h-4 bg-white/50 rounded-full shrink-0"></span>Control de temperatura para cargas especiales</li>
+          </ul>
+          <a href="contacto.html" class="inline-flex items-center gap-2 text-white font-bold text-sm hover:underline">
+            Solicitar demo <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- /SERVICIOS DETALLADOS -->
+
+
+<!-- ╔══════════════════════════════════════════════════════════════
+     ║  PROCESO DE TRABAJO
+     ║  Descripción: 4 pasos numerados con ícono, título y
+     ║  descripción. Conectados por línea horizontal.
+     ╚══════════════════════════════════════════════════════════════ -->
+<section class="py-20 bg-gray-950">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-14">
+      <span class="inline-block text-orange-500 font-black text-xs uppercase tracking-[0.2em] mb-3">── Metodología ──</span>
+      <h2 class="text-4xl md:text-5xl font-black text-white mb-4">Cómo <span class="text-orange-500">Trabajamos</span></h2>
+      <p class="text-gray-500 max-w-lg mx-auto">Un proceso simple, claro y transparente desde la cotización hasta la entrega.</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0">
+      <!-- Paso 1 -->
+      <div class="relative text-center px-6 pb-8 lg:pb-0">
+        <div class="relative z-10 w-14 h-14 bg-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-5 shadow-xl shadow-orange-600/40">
+          <span class="text-white font-black text-lg">01</span>
+        </div>
+        <!-- Línea conectora horizontal (desktop) -->
+        <div class="hidden lg:block absolute top-7 left-1/2 right-0 h-0.5 bg-orange-600/20 z-0"></div>
+        <h3 class="text-white font-bold mb-2">Consulta</h3>
+        <p class="text-gray-500 text-sm">Nos contactas y describís tu necesidad de transporte.</p>
+      </div>
+      <!-- Paso 2 -->
+      <div class="relative text-center px-6 pb-8 lg:pb-0">
+        <div class="relative z-10 w-14 h-14 bg-gray-800 border-2 border-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-5">
+          <span class="text-orange-500 font-black text-lg">02</span>
+        </div>
+        <div class="hidden lg:block absolute top-7 left-1/2 right-0 h-0.5 bg-orange-600/20 z-0"></div>
+        <h3 class="text-white font-bold mb-2">Cotización</h3>
+        <p class="text-gray-500 text-sm">Elaboramos una propuesta personalizada en menos de 24 horas.</p>
+      </div>
+      <!-- Paso 3 -->
+      <div class="relative text-center px-6 pb-8 lg:pb-0">
+        <div class="relative z-10 w-14 h-14 bg-gray-800 border-2 border-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-5">
+          <span class="text-orange-500 font-black text-lg">03</span>
+        </div>
+        <div class="hidden lg:block absolute top-7 left-1/2 right-0 h-0.5 bg-orange-600/20 z-0"></div>
+        <h3 class="text-white font-bold mb-2">Operación</h3>
+        <p class="text-gray-500 text-sm">Ejecutamos el transporte con seguimiento GPS en tiempo real.</p>
+      </div>
+      <!-- Paso 4 -->
+      <div class="relative text-center px-6">
+        <div class="relative z-10 w-14 h-14 bg-gray-800 border-2 border-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-5">
+          <span class="text-orange-500 font-black text-lg">04</span>
+        </div>
+        <h3 class="text-white font-bold mb-2">Entrega</h3>
+        <p class="text-gray-500 text-sm">Confirmamos la entrega y emitimos toda la documentación.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /PROCESO -->
+
+
+<!-- CTA final -->
+<section class="bg-orange-600 py-14">
+  <div class="max-w-3xl mx-auto px-6 text-center">
+    <h2 class="text-3xl font-black text-white mb-3">¿Necesitas un servicio personalizado?</h2>
+    <p class="text-orange-100 mb-7">Cuéntanos tu operación y te diseñamos una solución a medida.</p>
+    <a href="contacto.html" class="inline-flex items-center gap-2 bg-white text-orange-600 font-black px-8 py-4 rounded-full hover:bg-gray-100 transition-colors shadow-xl text-sm">
+      Solicitar cotización ahora <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+    </a>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer></footer>
+
+<a href="https://wa.me/51999999999" target="_blank" class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-green-500 hover:bg-green-400 rounded-full shadow-2xl flex items-center justify-center transition-all hover:scale-110" aria-label="WhatsApp">
+  <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script src="resources/js/layout.js"></script>
+<script>
+  
+  const bh = document.getElementById('btnHam'), mm = document.getElementById('menuMob'),
+        ih = document.getElementById('icoHam'), ix = document.getElementById('icoX');
+  bh.addEventListener('click', () => { const o = !mm.classList.contains('hidden'); mm.classList.toggle('hidden'); ih.classList.toggle('hidden', !o); ix.classList.toggle('hidden', o); });
+  mm.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { mm.classList.add('hidden'); ih.classList.remove('hidden'); ix.classList.add('hidden'); }));
+</script>
+</body>
+</html>
+
